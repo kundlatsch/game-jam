@@ -4,23 +4,8 @@ using UnityEngine;
 
 public class CameraControl : MonoBehaviour {
 
-    public float ScrollSpeed = 15;
-    public double ScrollEdge = 0.01;
-     
-    private int HorizontalScroll = 1;
-    private int VerticalScroll = 1;
-    private int DiagonalScroll = 1;
-     
-    public float PanSpeed = 10;
-     
-    private Vector2 Zoomrand_range = new Vector2(-5,5);
-    private float CurrentZoom = 0;
-    public float ZoomZpeed = 1;
-    public float ZoomRotation = 1;
-     
-    private Vector3 InitPos;
-    private Vector3 InitRotation;
-
+    public int ScrollSpeed = 250;
+   
 
     void Start()
     {
@@ -32,23 +17,21 @@ public class CameraControl : MonoBehaviour {
     void Update ()
     {
         
-        if ( Input.GetKey("d"))
-            {
-                transform.Translate(Vector3.right * Time.deltaTime * ScrollSpeed, Space.World);
-            }
-        else if ( Input.GetKey("a"))
-            {
-                transform.Translate(Vector3.left * Time.deltaTime * ScrollSpeed, Space.World);
-            }
+        if (Input.GetKey("d") && transform.position.x < 333) {
+            transform.Translate(Vector3.right * Time.deltaTime * ScrollSpeed * 10, Space.World);
+        }
+        
+        else if(Input.GetKey("a") && transform.position.x > -3000) {
+            transform.Translate(Vector3.left * Time.deltaTime * ScrollSpeed * 10, Space.World);
+        }
            
-        if ( Input.GetKey("w"))
-            {
-                transform.Translate(Vector3.up * Time.deltaTime * ScrollSpeed, Space.World);
-            }
-        else if ( Input.GetKey("s"))
-            {
-                transform.Translate(Vector3.down * Time.deltaTime * ScrollSpeed, Space.World);
-            }
+        if(Input.GetKey("w") && transform.position.y < 300) {
+            transform.Translate(Vector3.up * Time.deltaTime * ScrollSpeed * 10, Space.World);
+        }
+
+        else if( Input.GetKey("s") && transform.position.y > -200) {
+            transform.Translate(Vector3.down * Time.deltaTime * ScrollSpeed * 10, Space.World);
+        }
 
 
         // float fov = Camera.main.fieldOfView;

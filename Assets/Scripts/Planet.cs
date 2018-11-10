@@ -3,21 +3,21 @@ public class Planet {
 
 	private int size;
 	public int metal {get; set;}
-	private int deuterium {get; set;}
+	public int deuterium {get; set;}
 	private bool isMain {get; set;}
 
-	private int metal_mine_level {get; set;}
-	private int metal_up_cost {get; set;}
+	public int metal_mine_level {get; set;}
+	public int metal_up_cost {get; set;}
 
-	private int deut_mine_level {get; set;}
-	private int deut_up_cost {get; set;}
+	public int deut_mine_level {get; set;}
+	public int deut_up_cost {get; set;}
 
 	private int travel_cost {get;}
 
 	private Random rnd;
 	private int rand_range;
 
-	private int index {get;}
+	public int index {get;}
 	/* 
 		Type
 		  0: Rochoso

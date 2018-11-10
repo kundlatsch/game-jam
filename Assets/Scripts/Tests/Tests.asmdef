@@ -1,0 +1,12 @@
+{
+    "name": "Testos",
+    "references": [],
+    "optionalUnityReferences": [
+        "TestAssemblies"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [
+        "LinuxStandaloneUniversal"
+    ],
+    "allowUnsafeCode": true
+}
