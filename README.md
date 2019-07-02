@@ -1,7 +1,3 @@
-# upm-package-template-2D
-Project Template for 2D scenes not using a SRP 
-
-This template uses Unity’s built in rendering pipeline. This is a good starting point for developers looking to create 2D projects. 
-
-Package Name: com.unity.template.2d
-Package Version: 0.0.4
+# Icarus Odyssey
+Unity 2D project developed for [UFSC Gamejam](https://itch.io/jam/ufsc-game-jam), in 2018.
+The game is a clicker-like space adventure, and the gamejam's theme was "Expansion". The final submission is available in the [itch.io entry](https://kundlatsch.itch.io/icarusodyssey).
